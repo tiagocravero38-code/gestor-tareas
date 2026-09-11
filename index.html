@@ -12,6 +12,16 @@
 </head>
 <body class="bg-body-tertiary">
   <div class="container py-5" style="max-width: 720px;">
+    <div class="card mt-4">
+  <div class="card-body">
+    <h2 class="h6">Copia de seguridad (JSON)</h2>
+    <div class="d-flex gap-2 mb-2">
+      <button type="button" class="btn btn-sm btn-outline-primary" id="btn-exportar">Exportar</button>
+      <button type="button" class="btn btn-sm btn-outline-primary" id="btn-importar">Importar</button>
+    </div>
+    <textarea id="json" class="form-control font-monospace" rows="7" spellcheck="false"></textarea>
+  </div>
+</div>
     <h1 class="h3 mb-4">Mis tareas</h1>
 
     <!-- ALTA DE TAREAS -->
@@ -33,6 +43,11 @@
 
     <p id="error" class="text-danger small"></p>
 
+    <div class="btn-group btn-group-sm mb-3" id="filtros">
+  <button type="button" class="btn btn-outline-secondary active" data-filtro="todas">Todas</button>
+  <button type="button" class="btn btn-outline-secondary" data-filtro="pendientes">Pendientes</button>
+  <button type="button" class="btn btn-outline-secondary" data-filtro="hechas">Hechas</button>
+</div>
     <!-- LA LISTA: vacía a propósito -->
     <ul id="lista" class="list-group mb-3"></ul>
 

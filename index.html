@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de tareas · DDS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .hecha .texto { text-decoration: line-through; opacity: .55; }
+  </style>
+  <script src="app.js" defer></script>
+</head>
+<body class="bg-body-tertiary">
+  <div class="container py-5" style="max-width: 720px;">
+    <h1 class="h3 mb-4">Mis tareas</h1>
+
+    <!-- ALTA DE TAREAS -->
+    <form id="form-tarea" class="row g-2 mb-2">
+      <div class="col-12 col-sm-6">
+        <input type="text" id="texto" class="form-control" placeholder="¿Qué hay que hacer?" autocomplete="off">
+      </div>
+      <div class="col-8 col-sm-3">
+        <select id="prioridad" class="form-select">
+          <option value="baja">Baja</option>
+          <option value="media" selected>Media</option>
+          <option value="alta">Alta</option>
+        </select>
+      </div>
+      <div class="col-4 col-sm-3 d-grid">
+        <button type="submit" class="btn btn-primary">Agregar</button>
+      </div>
+    </form>
+
+    <p id="error" class="text-danger small"></p>
+
+    <!-- LA LISTA: vacía a propósito -->
+    <ul id="lista" class="list-group mb-3"></ul>
+
+    <!-- ESTADÍSTICAS -->
+    <p id="estadisticas" class="text-secondary small"></p>
+  </div>
+</body>
+</html>
